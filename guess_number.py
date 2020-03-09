@@ -5,13 +5,17 @@
 
 import random # 載入亂數，已經在library，但是不常用，需要import才能用
 r = random.randint(1, 100) # 從1到100產生一個隨機整數
+count = 0
 while True:
+	count += 1 # 跟count = count + 1 一樣 只是寫法不同
 	num = input('請猜數字: ')
 	num = int(num)
 	if num == r:
 		print('你猜中了!')
+		print('這是你猜的第', count,'次')	
 		break
 	elif num > r:
 		print('你猜的數字比答案大')
 	elif num < r:
-		print('你猜的數字比答案小')		
+		print('你猜的數字比答案小')	
+	print('這是你猜的第', count,'次')		
