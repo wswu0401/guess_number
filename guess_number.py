@@ -4,7 +4,11 @@
 # 猜錯的話 要告訴他 比答案大/小
 
 import random # 載入亂數，已經在library，但是不常用，需要import才能用
-r = random.randint(1, 100) # 從1到100產生一個隨機整數
+start = input('請決定隨機數字範圍開始值: ')
+end = input('請決定隨機數字範圍結束值')
+start = int(start)
+end = int(end)
+r = random.randint(start, end) # 從1到100產生一個隨機整數, 第4版本由使用者自己決定隨機數的開始結束範圍
 count = 0
 while True:
 	count += 1 # 跟count = count + 1 一樣 只是寫法不同
